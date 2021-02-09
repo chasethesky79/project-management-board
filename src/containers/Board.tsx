@@ -1,5 +1,6 @@
-import { IBoardData, lanes } from '../models/board';
+import { IBoardData, lanes, ILane } from '../models/board';
 import { useState, useEffect } from 'react';
+import { Lane } from '../components/Lane';
 
 export const Board: React.FC<IBoardData> = () => {
     const initialBoardData: IBoardData = {
@@ -22,5 +23,12 @@ export const Board: React.FC<IBoardData> = () => {
         }
      } fetchData();     
      }, []);
-    return ()
+    return (
+        <div>
+            {lanes.map((lane: ILane)=> {
+                const ticketsForLane = boardData.data.filter(item => item.id === lane.id);
+                return <Lane key={lane.id} tickets={ticketsForLane}/>
+            })}
+        </div>
+    )
 }

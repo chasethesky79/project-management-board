@@ -1,22 +1,30 @@
-export interface IBoardItem {
+export interface ITicket {
     id: number;
     title: string;
     body: string;
     lane: number
 }
 
+export interface TicketProps {
+    ticket: ITicket
+}
+
+export interface LaneProps {
+    tickets: ITicket[]
+}
+
 export interface IBoardData {
-    data: IBoardItem[];
+    data: ITicket[];
     loading: boolean;
     error: string
 }
 
-type Lane = {
+export type ILane = {
     id: number,
     title: string
 }
 
-export const lanes: Lane[] = [
+export const lanes: ILane[] = [
  {
      id: 1,
      title: 'To Do'

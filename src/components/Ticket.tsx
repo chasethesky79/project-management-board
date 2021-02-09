@@ -1,7 +1,7 @@
-import { IBoardItem } from '../models/board';
+import {  ITicket, TicketProps } from '../models/board';
 import { TicketWrapper, Body, Title } from '../styled-components/styled-components';
 
-export const Ticket: React.FC<IBoardItem> = (ticket: IBoardItem) => {
+export const Ticket:React.FC<TicketProps> = ({ ticket }: TicketProps) => {
   const { title, body } = ticket;
   return (
       <TicketWrapper>

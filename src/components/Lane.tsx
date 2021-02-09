@@ -1,11 +1,13 @@
 import React from 'react';
 import { ITicket, LaneProps } from '../models/board';
 import { Ticket } from '../components/Ticket';
+import { LaneWrapper } from '../styled-components/styled-components';
 
-export const Lane: React.FC<LaneProps> = ({ tickets }: LaneProps) => {
+export const Lane: React.FC<LaneProps> = ({ tickets , title }: LaneProps) => {
     return (
-        <div>
-        {tickets.map((item : ITicket) => <Ticket key={item.id} ticket={item}/>)}
-        </div>
+        <LaneWrapper>
+          <h3>{title}</h3>  
+          {tickets.map((item : ITicket) => <Ticket key={item.id} ticket={item}/>)}
+        </LaneWrapper>
     )
 }

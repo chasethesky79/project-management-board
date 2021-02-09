@@ -10,7 +10,8 @@ export interface TicketProps {
 }
 
 export interface LaneProps {
-    tickets: ITicket[]
+    tickets: ITicket[],
+    title: string;
 }
 
 export interface IBoardData {

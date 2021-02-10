@@ -10,6 +10,7 @@ export const Board: React.FC<{}> = () => {
         error: ''
     }
     const [boardData, setBoardData] = useState(initialBoardData);
+    const { loading, error } = boardData;
     useEffect(() => {
         async function fetchData() {
         try {
@@ -28,7 +29,7 @@ export const Board: React.FC<{}> = () => {
         <LanesContainer>
             {boardData && boardData.data && lanes.map((lane: ILane)=> {
                 const ticketsForLane = boardData.data.filter(item => item.lane === lane.id);
-                return <Lane key={lane.id} title={lane.title} tickets={ticketsForLane}/>
+                return <Lane loading={loading} error={error} key={lane.id} title={lane.title} tickets={ticketsForLane}/>
             })}
         </LanesContainer>
     )

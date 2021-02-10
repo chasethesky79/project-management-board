@@ -35,3 +35,7 @@ height: 100%;
 background: darkGray;
 margin: 10px 10px 10px 10px;
 `
+
+export const Alert = styled.div`
+text-align: center
+`

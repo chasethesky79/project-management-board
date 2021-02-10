@@ -12,6 +12,8 @@ export interface TicketProps {
 export interface LaneProps {
     tickets: ITicket[],
     title: string;
+    loading: boolean;
+    error: string
 }
 
 export interface IBoardData {

@@ -5,21 +5,23 @@ export interface ITicket {
     lane: number
 }
 
-export interface TicketProps {
+export interface IErrorDetails {
+    loading?: boolean;
+    error?: string
+}
+
+export interface TicketProps extends IErrorDetails{
     ticket: ITicket
 }
 
-export interface LaneProps {
+export interface LaneProps extends IErrorDetails {
     tickets: ITicket[],
     title: string;
-    loading: boolean;
-    error: string
 }
 
-export interface IBoardData {
+export interface IBoardData extends IErrorDetails {
     data: ITicket[];
-    loading: boolean;
-    error: string
+
 }
 
 export interface IDataSourceProps {

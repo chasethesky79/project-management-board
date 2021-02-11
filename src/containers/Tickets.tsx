@@ -6,9 +6,7 @@ import { Ticket } from '../components/Ticket';
 const Tickets: React.FC<IBoardData> = ({ data, loading, error }: IBoardData) => {
     return (
         <BoardWrapper>
-            {data && data.map((ticket: ITicket)=> {
-                return <Ticket loading={loading} error={error} key={ticket.id} ticket={ticket} />
-            })}
+            {data && data.map((ticket: ITicket)=> <Ticket loading={loading} error={error} key={ticket.id} ticket={ticket} />)}
         </BoardWrapper>
     )
 }

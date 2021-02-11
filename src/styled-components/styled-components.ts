@@ -20,13 +20,16 @@ export const Title = styled.h3`
 export const Body = styled.p`
   width: 100%
 `
-export const LanesContainer = styled.div`
+export const BoardWrapper = styled.div`
  display: flex;
  flex-direction: row;
  flex-wrap: wrap;
- margin: auto;
+ justify-content: space-between;
+ margin: 5%;
  width: 80%;
- border: 1px solid;
+ @media (max-width: 768px) {
+    flex-direction: column;
+ }
 `
 
 export const LaneWrapper = styled.div`

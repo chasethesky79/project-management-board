@@ -26,7 +26,17 @@ export const BoardWrapper = styled.div`
  flex-wrap: wrap;
  justify-content: space-between;
  margin: 5%;
- width: 80%;
+ @media (max-width: 768px) {
+    flex-direction: column;
+ }
+`
+
+export const TicketsWrapper = styled.div`
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ width: 50%;
+ margin: auto;
  @media (max-width: 768px) {
     flex-direction: column;
  }

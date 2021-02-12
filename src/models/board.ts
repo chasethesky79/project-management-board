@@ -10,7 +10,7 @@ export interface IErrorDetails {
     error?: string
 }
 
-export interface TicketProps extends IErrorDetails{
+export interface TicketProps {
     ticket: ITicket
 }
 

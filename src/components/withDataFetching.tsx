@@ -10,7 +10,6 @@ export const withDataFetching = (WrappedComponent: React.FC<IBoardAndLanes>) => 
             error: ''
         }
         const [boardData, setBoardData] = useState(initialBoardData);
-        const { data, loading, error } = boardData;
         const wrappedComponentProps: IBoardAndLanes = {...boardData, ...{ lanes: LANES }}
         useEffect(() => {
             async function fetchData() {

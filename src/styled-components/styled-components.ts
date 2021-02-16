@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { TicketProps } from '../models/board';
 
-export const TicketWrapper = styled.div`
+export const TicketWrapper = styled.div<TicketProps>`
   background: lightGray;
   padding: 20px;
   width: 80%;
@@ -9,6 +10,7 @@ export const TicketWrapper = styled.div`
   border-radius: 20px;
   &:not(:last-child) {
       margin-bottom: 5%;
+      margin-right: ${props => props.marginRight ? '1%' : '0'}
   }
 `
 

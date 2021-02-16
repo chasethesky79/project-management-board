@@ -11,7 +11,8 @@ export interface IErrorDetails {
 }
 
 export interface TicketProps {
-    ticket: ITicket
+    ticket: ITicket;
+    marginRight: boolean
 }
 
 export interface LaneProps extends IErrorDetails {

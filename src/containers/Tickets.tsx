@@ -7,7 +7,7 @@ const Tickets: React.FC<IBoardData> = ({ data, loading, error }: IBoardData) => 
     return (
         <TicketsWrapper>
             {( loading || error ) && <Alert>{loading ? 'Loading...' : error}</Alert>}
-            {data && data.map((ticket: ITicket)=> <Ticket key={ticket.id} ticket={ticket} />)}
+            {data && data.map((ticket: ITicket)=> <Ticket key={ticket.id} ticket={ticket} marginRight/>)}
         </TicketsWrapper>
     )
 }

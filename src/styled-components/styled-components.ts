@@ -1,7 +1,10 @@
 import styled from 'styled-components';
-import { TicketProps } from '../models/board';
 
-export const TicketWrapper = styled.div<TicketProps>`
+type TicketWrapperProps = {
+   marginRight: boolean
+}
+
+export const TicketWrapper = styled.div<TicketWrapperProps>`
   background: lightGray;
   padding: 20px;
   width: 80%;

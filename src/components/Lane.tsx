@@ -8,7 +8,7 @@ export const Lane: React.FC<LaneProps> = ({ tickets , title, loading, error }: L
         <LaneWrapper>
           <h3>{title}</h3>
           {( loading || error ) && <Alert>{loading ? 'Loading...' : error}</Alert>}
-          {tickets.map((item : ITicket) => <Ticket key={item.id} ticket={item}/>)}
+          {tickets.map((item : ITicket) => <Ticket key={item.id} ticket={item} marginRight/>)}
         </LaneWrapper>
     )
 }

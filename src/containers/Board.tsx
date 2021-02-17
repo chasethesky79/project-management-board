@@ -1,4 +1,4 @@
-import { ILane, IBoardAndLanes, ITicket } from '../models/board';
+import { ILane, IBoardAndLanes, ITicket, onDragStart } from '../models/board';
 import { Lane } from '../components/Lane';
 import { BoardWrapper } from '../styled-components/styled-components';
 import { withDataFetching } from '../components/withDataFetching';
@@ -15,7 +15,7 @@ const Board: React.FC<IBoardAndLanes> = ({ data, loading, error, lanes }: IBoard
         <BoardWrapper>
             {data && lanes.map((lane: ILane)=> {
                 const ticketsForLane = tickets.filter(item => item.lane === lane.id);
-                return <Lane loading={loading} error={error} key={lane.id} title={lane.title} tickets={ticketsForLane}/>
+                return <Lane loading={loading} error={error} key={lane.id} title={lane.title} tickets={ticketsForLane} onDragStart={onDragStart}/>
             })}
         </BoardWrapper>
     )
